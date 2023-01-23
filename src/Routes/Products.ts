@@ -1,4 +1,5 @@
 import express from 'express';
+import ProductsController from '../Controllers/ProductsController';
 
 const productsRouter = express.Router();
 
@@ -6,6 +7,8 @@ const productsRouter = express.Router();
 productsRouter.post('/');
 
 // REQUISITO 02
-productsRouter.get('/');
+const productsController = new ProductsController();
+
+productsRouter.get('/', productsController.getAll);
 
 export default productsRouter;
