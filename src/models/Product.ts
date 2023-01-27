@@ -1,4 +1,4 @@
-import { Pool, RowDataPacket } from 'mysql2/promise';
+import { Pool, ResultSetHeader, RowDataPacket } from 'mysql2/promise';
 import { IProduct } from '../interfaces/Products';
 
 export default class Product {
@@ -6,6 +6,15 @@ export default class Product {
 
   constructor(conn: Pool) {
     this.connection = conn;
+  }
+
+  // REQUISITO 01 
+  async insert({ name, amount }: { name: string, amount: string }) {
+    const [{ insertId }] = await this.connection.execute<ResultSetHeader>(`
+      INSERT INTO Trybesmith.products (name, amount) VALUES (?, ?)
+      `, [name, amount]);
+    
+    return { insertId, name, amount };
   }
 
   async getAll(): Promise<IProduct[]> {
