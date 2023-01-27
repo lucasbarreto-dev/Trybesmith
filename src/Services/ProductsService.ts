@@ -1,4 +1,4 @@
-import { IProduct } from '../interfaces/Products';
+import { IProductService } from '../interfaces/Products';
 import ProductModel from '../models/Product';
 import connection from '../models/connection';
 
@@ -17,9 +17,9 @@ export default class Product {
   }; 
 
   // REQUISITO 02
-  async getAll(): Promise<IProduct[]> {
-    const products = this.model.getAll();
+  async getAll(): Promise<IProductService> {
+    const products = await this.model.getAll();
   
-    return products;
+    return { status: 200, payload: products };
   }
 }
