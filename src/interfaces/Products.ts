@@ -4,3 +4,8 @@ export interface IProduct {
   amount: string,
   orderId: number
 }
+
+export interface IProductService {
+  status: number,
+  payload: IProduct[]
+}
