@@ -1,6 +1,6 @@
-import { Pool, ResultSetHeader } from 'mysql2/promise';
+import { Pool, ResultSetHeader, RowDataPacket } from 'mysql2/promise';
 import tokenize from '../auth/tokenize';
-import { IUser } from '../interfaces/Users';
+import { ILogin, IUser } from '../interfaces/Users';
 
 export default class User {
   connection: Pool;
@@ -19,4 +19,15 @@ export default class User {
 
     return { token };
   }
+
+  // REQUISITO 05
+  getUser = async ({ username, password }: ILogin) => {
+    const [[user]] = await this.connection.execute<RowDataPacket[] & ResultSetHeader[]>(`
+      SELECT * FROM Trybesmith.users WHERE username = ? AND password = ?
+    `, [username, password]);
+    
+    console.log(user);
+    
+    return user;
+  };
 }
