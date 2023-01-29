@@ -1,13 +1,10 @@
-import { Pool, RowDataPacket } from 'mysql2/promise';
+import { RowDataPacket } from 'mysql2/promise';
 import { IOrder } from '../interfaces/Orders';
+import conn from './connection';
 
 export default class Product {
-  connection: Pool;
-
-  constructor(conn: Pool) {
-    this.connection = conn;
-  }
-
+  public connection = conn;
+  
   async getAll(): Promise<IOrder[]> {
     const [orders] = await this.connection.execute<IOrder[] & RowDataPacket[]>(
       `SELECT 

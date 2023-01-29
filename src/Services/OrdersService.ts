@@ -1,12 +1,12 @@
 import OrderModel from '../models/Order';
-import connection from '../models/connection';
+// import connection from '../models/connection';
 import { IOrderService } from '../interfaces/Orders';
 
 export default class Order {
   public model: OrderModel;
 
   constructor() {
-    this.model = new OrderModel(connection);
+    this.model = new OrderModel();
   }
 
   // REQUISITO 04
