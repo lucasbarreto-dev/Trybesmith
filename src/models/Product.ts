@@ -17,6 +17,7 @@ export default class Product {
     return { insertId, name, amount };
   }
 
+  // REQUISITO 02
   async getAll(): Promise<IProduct[]> {
     const [products] = await this.connection.execute<IProduct[] & RowDataPacket[]>(
       'SELECT * FROM Trybesmith.products',
