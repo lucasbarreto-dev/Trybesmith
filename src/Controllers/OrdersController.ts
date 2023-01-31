@@ -19,7 +19,6 @@ export default class OrdersController {
   insert = async (req: Request, res: Response) => {
     const { id } = req.user;
     const { productsIds } = req.body;
-    // console.log(' id na camada controller = ', id);
     
     const { status, payload } = await this.service.insertAndUpdate(id, productsIds);
 

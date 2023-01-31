@@ -25,9 +25,7 @@ export default class User {
     const [[user]] = await this.connection.execute<RowDataPacket[] & ResultSetHeader[]>(`
       SELECT * FROM Trybesmith.users WHERE username = ? AND password = ?
     `, [username, password]);
-    
-    console.log(user);
-    
+     
     return user;
   };
 }

@@ -30,10 +30,7 @@ export default class Product {
     return { orderId: insertId };
   };
 
-  update = async (orderId: number, productsIds: number[]): Promise<void> => {
-    console.log('oderId = ', orderId);
-    console.log('productsIds = ', productsIds);
-    
+  update = async (orderId: number, productsIds: number[]): Promise<void> => {    
     await Promise.all(productsIds.map((productId) => this.connection.execute<ResultSetHeader>(`
         UPDATE Trybesmith.products SET order_id = ? WHERE id = ?
       `, [orderId, productId])));

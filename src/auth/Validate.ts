@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
-// import CustomRequest from '../interfaces/Request';
 
 const { verify } = jwt;
 
