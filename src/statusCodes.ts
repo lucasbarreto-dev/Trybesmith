@@ -1,4 +1,3 @@
-// ./statusCodes.ts
 const statusCodes = {
   OK: 200,
   NOT_FOUND: 404,

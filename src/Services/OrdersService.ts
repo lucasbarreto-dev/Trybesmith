@@ -15,4 +15,18 @@ export default class Order {
 
     return { status: 200, payload: orders };
   }
+
+  // REQUISITO 08
+  insertAndUpdate = async (userId: number, productIds: number[]) => {
+    // const checkIds = productIds.some((e) => typeof e !== typeof 1);
+  
+    // if (checkIds) {
+    //   return { status: 422, payload: { message: 'productIds must include only numbers' } };
+    // }
+
+    const { orderId } = await this.model.insert(userId);
+    await this.model.update(orderId, productIds);
+
+    return { status: 201, payload: { id: userId, productIds } };
+  };
 }
