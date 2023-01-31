@@ -17,16 +17,13 @@ export default class Order {
   }
 
   // REQUISITO 08
-  insertAndUpdate = async (userId: number, productIds: number[]) => {
-    // const checkIds = productIds.some((e) => typeof e !== typeof 1);
-  
-    // if (checkIds) {
-    //   return { status: 422, payload: { message: 'productIds must include only numbers' } };
-    // }
-
+  insertAndUpdate = async (userId: number, productsIds: number[]) => {
+    if (productsIds.length === 0) {
+      return { status: 422, payload: { message: '"productsIds" must include only numbers' } };
+    }
     const { orderId } = await this.model.insert(userId);
-    await this.model.update(orderId, productIds);
+    await this.model.update(orderId, productsIds);
 
-    return { status: 201, payload: { id: userId, productIds } };
+    return { status: 201, payload: { userId, productsIds } };
   };
 }

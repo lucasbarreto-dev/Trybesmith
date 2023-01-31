@@ -1,5 +1,6 @@
 import express from 'express';
 import OrdersController from '../Controllers/OrdersController';
+import checkProductsIds from '../Middlewares/ProductsIds';
 import validate from '../auth/Validate';
 
 const ordersRouter = express.Router();
@@ -10,6 +11,6 @@ const ordersController = new OrdersController();
 ordersRouter.get('/', ordersController.getAll);
 
 // REQUISITO 08
-ordersRouter.post('/', validate, ordersController.insert);
+ordersRouter.post('/', validate, checkProductsIds, ordersController.insert);
 
 export default ordersRouter;

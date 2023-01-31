@@ -25,7 +25,7 @@ export default class Product {
   insert = async (userId: number) => {
     const [{ insertId }] = await this.connection.execute<ResultSetHeader>(`
       INSERT INTO Trybesmith.orders (user_id) VALUES (?)
-    `, userId);
+    `, [userId]);
 
     return { orderId: insertId };
   };
