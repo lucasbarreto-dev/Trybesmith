@@ -9,11 +9,11 @@ Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua cr
 - quais arquivos/pastas foram desenvolvidos pela Trybe.
 -->
 
-### REQUISITO 01 - Criar um endpoint para o cadastro de produtos;
-### REQUISITO 02 - Criar um endpoint para a listagem de produtos
-### REQUISITO 03 - Criar um endpoint para o cadastro de pessoas usuárias;
-### REQUISITO 04 - Criar um endpoint para listar todos os pedidos;
-### REQUISITO 05 - Criar um endpoint para o login de pessoas usuárias;
-### REQUISITO 06 - Cria as validações dos produtos;
-### REQUISITO 07 - Cria as validações para as pessoas usuárias;
-### REQUISITO 08 - Cria um endpoint para o cadastro de um pedido;
+### REQUISITO 01 - Criar um endpoint para o cadastro de produtos.
+### REQUISITO 02 - Criar um endpoint para a listagem de produtos.
+### REQUISITO 03 - Criar um endpoint para o cadastro de pessoas usuárias.
+### REQUISITO 04 - Criar um endpoint para listar todos os pedidos.
+### REQUISITO 05 - Criar um endpoint para o login de pessoas usuárias.
+### REQUISITO 06 - Cria as validações dos produtos.
+### REQUISITO 07 - Cria as validações para as pessoas usuárias.
+### REQUISITO 08 - Cria um endpoint para o cadastro de um pedido.
