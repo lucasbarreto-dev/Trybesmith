@@ -14,6 +14,6 @@ Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua cr
 ### REQUISITO 03 - Criar um endpoint para o cadastro de pessoas usuárias.
 ### REQUISITO 04 - Criar um endpoint para listar todos os pedidos.
 ### REQUISITO 05 - Criar um endpoint para o login de pessoas usuárias.
-### REQUISITO 06 - Cria as validações dos produtos.
-### REQUISITO 07 - Cria as validações para as pessoas usuárias.
-### REQUISITO 08 - Cria um endpoint para o cadastro de um pedido.
+### REQUISITO 06 - Criar as validações dos produtos.
+### REQUISITO 07 - Criar as validações para as pessoas usuárias.
+### REQUISITO 08 - Criar um endpoint para o cadastro de um pedido.
