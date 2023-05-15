@@ -9,11 +9,24 @@ Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua cr
 - quais arquivos/pastas foram desenvolvidos pela Trybe.
 -->
 
+# <strong> Trybesmith </strong>
+
+<p> An API to manage a store of ancient items. I've used Typescript and Node.js to implement a CRUD and authentication with JWT. </p>
+
+<br />
+
 ### REQUISITO 01 - Criar um endpoint para o cadastro de produtos.
+
 ### REQUISITO 02 - Criar um endpoint para a listagem de produtos.
+
 ### REQUISITO 03 - Criar um endpoint para o cadastro de pessoas usuárias.
+
 ### REQUISITO 04 - Criar um endpoint para listar todos os pedidos.
+
 ### REQUISITO 05 - Criar um endpoint para o login de pessoas usuárias.
+
 ### REQUISITO 06 - Criar as validações dos produtos.
+
 ### REQUISITO 07 - Criar as validações para as pessoas usuárias.
+
 ### REQUISITO 08 - Criar um endpoint para o cadastro de um pedido.
