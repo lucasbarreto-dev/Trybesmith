@@ -11,7 +11,10 @@ Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua cr
 
 # <strong> Trybesmith </strong>
 
-<p> An API to manage a store of ancient items. I've used Typescript and Node.js to implement a CRUD and authentication with JWT. </p>
+<p>This is a project I developed during my back-end development learning.
+It's a simple CRUD API written in Typescript using JWT authentication.</p>
+
+<p>It manages a store of ancient items.</p>
 
 <br />
 
